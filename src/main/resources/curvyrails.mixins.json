@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "package": "com.froobert.curvyrails.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "AbstractMinecartMixin"
+  ],
+  "client": [],
+  "injectors": {
+    "defaultRequire": 1
+  }
+
+}

@@ -1,0 +1,6 @@
+// 1.21.1	2026-01-18T22:28:40.630958008	Block States: curvyrails
+de9bd79872c4e5e5f3ffc28cd7dcfce31e2ce79f assets/curvyrails/blockstates/small_curve_rail.json
+23f14cdecc3c81920716faf1959c96a60353be11 assets/curvyrails/models/block/curve_rail_entry.json
+481cc652ee14eb90032b4f5412af2b72b57c0e13 assets/curvyrails/models/block/curve_rail_exit.json
+463d4cafa20d01c10d7340f01f67894e2d498974 assets/curvyrails/models/block/curve_rail_middle.json
+5ed6805849149959d739a9e010a08c74c91c7763 assets/curvyrails/models/block/curve_rail_middle_low.json

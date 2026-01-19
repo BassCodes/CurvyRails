@@ -1,0 +1,124 @@
+{
+  "variants": {
+    "curve_section=entry,facing=east,waterlogged=false": {
+      "model": "curvyrails:block/curve_rail_entry",
+      "y": 90
+    },
+    "curve_section=entry,facing=east,waterlogged=true": {
+      "model": "curvyrails:block/curve_rail_entry",
+      "y": 90
+    },
+    "curve_section=entry,facing=north,waterlogged=false": {
+      "model": "curvyrails:block/curve_rail_entry"
+    },
+    "curve_section=entry,facing=north,waterlogged=true": {
+      "model": "curvyrails:block/curve_rail_entry"
+    },
+    "curve_section=entry,facing=south,waterlogged=false": {
+      "model": "curvyrails:block/curve_rail_entry",
+      "y": 180
+    },
+    "curve_section=entry,facing=south,waterlogged=true": {
+      "model": "curvyrails:block/curve_rail_entry",
+      "y": 180
+    },
+    "curve_section=entry,facing=west,waterlogged=false": {
+      "model": "curvyrails:block/curve_rail_entry",
+      "y": 270
+    },
+    "curve_section=entry,facing=west,waterlogged=true": {
+      "model": "curvyrails:block/curve_rail_entry",
+      "y": 270
+    },
+    "curve_section=exit,facing=east,waterlogged=false": {
+      "model": "curvyrails:block/curve_rail_exit",
+      "y": 90
+    },
+    "curve_section=exit,facing=east,waterlogged=true": {
+      "model": "curvyrails:block/curve_rail_exit",
+      "y": 90
+    },
+    "curve_section=exit,facing=north,waterlogged=false": {
+      "model": "curvyrails:block/curve_rail_exit"
+    },
+    "curve_section=exit,facing=north,waterlogged=true": {
+      "model": "curvyrails:block/curve_rail_exit"
+    },
+    "curve_section=exit,facing=south,waterlogged=false": {
+      "model": "curvyrails:block/curve_rail_exit",
+      "y": 180
+    },
+    "curve_section=exit,facing=south,waterlogged=true": {
+      "model": "curvyrails:block/curve_rail_exit",
+      "y": 180
+    },
+    "curve_section=exit,facing=west,waterlogged=false": {
+      "model": "curvyrails:block/curve_rail_exit",
+      "y": 270
+    },
+    "curve_section=exit,facing=west,waterlogged=true": {
+      "model": "curvyrails:block/curve_rail_exit",
+      "y": 270
+    },
+    "curve_section=middle,facing=east,waterlogged=false": {
+      "model": "curvyrails:block/curve_rail_middle",
+      "y": 90
+    },
+    "curve_section=middle,facing=east,waterlogged=true": {
+      "model": "curvyrails:block/curve_rail_middle",
+      "y": 90
+    },
+    "curve_section=middle,facing=north,waterlogged=false": {
+      "model": "curvyrails:block/curve_rail_middle"
+    },
+    "curve_section=middle,facing=north,waterlogged=true": {
+      "model": "curvyrails:block/curve_rail_middle"
+    },
+    "curve_section=middle,facing=south,waterlogged=false": {
+      "model": "curvyrails:block/curve_rail_middle",
+      "y": 180
+    },
+    "curve_section=middle,facing=south,waterlogged=true": {
+      "model": "curvyrails:block/curve_rail_middle",
+      "y": 180
+    },
+    "curve_section=middle,facing=west,waterlogged=false": {
+      "model": "curvyrails:block/curve_rail_middle",
+      "y": 270
+    },
+    "curve_section=middle,facing=west,waterlogged=true": {
+      "model": "curvyrails:block/curve_rail_middle",
+      "y": 270
+    },
+    "curve_section=middle_low,facing=east,waterlogged=false": {
+      "model": "curvyrails:block/curve_rail_middle_low",
+      "y": 90
+    },
+    "curve_section=middle_low,facing=east,waterlogged=true": {
+      "model": "curvyrails:block/curve_rail_middle_low",
+      "y": 90
+    },
+    "curve_section=middle_low,facing=north,waterlogged=false": {
+      "model": "curvyrails:block/curve_rail_middle_low"
+    },
+    "curve_section=middle_low,facing=north,waterlogged=true": {
+      "model": "curvyrails:block/curve_rail_middle_low"
+    },
+    "curve_section=middle_low,facing=south,waterlogged=false": {
+      "model": "curvyrails:block/curve_rail_middle_low",
+      "y": 180
+    },
+    "curve_section=middle_low,facing=south,waterlogged=true": {
+      "model": "curvyrails:block/curve_rail_middle_low",
+      "y": 180
+    },
+    "curve_section=middle_low,facing=west,waterlogged=false": {
+      "model": "curvyrails:block/curve_rail_middle_low",
+      "y": 270
+    },
+    "curve_section=middle_low,facing=west,waterlogged=true": {
+      "model": "curvyrails:block/curve_rail_middle_low",
+      "y": 270
+    }
+  }
+}
