@@ -1,25 +1,29 @@
+# Curvy Rails
 
-Installation information
-=======
+This mod adds a new corner rail variety called the **Curvy Rail**.
 
-This template repository can be directly cloned to get you started with a new
-mod. Simply create a new repository cloned from this one, by following the
-instructions provided by [GitHub](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template).
+The Curvy Rail is a softer, more round version of the vanilla 90° rail corner.
 
-Once you have your clone, simply open the repository in the IDE of your choice. The usual recommendation for an IDE is either IntelliJ IDEA or Eclipse.
+## How to use
 
-If at any point you are missing libraries in your IDE, or you've run into problems you can
-run `gradlew --refresh-dependencies` to refresh the local cache. `gradlew clean` to reset everything 
-{this does not affect your code} and then start the process again.
+Create a vanilla 90° rail corner then Shift+RightClick on it with an empty hand.
+The vanilla 90° corner is then replaced with this mod's curvy corner.
 
-Mapping Names:
-============
-By default, the MDK is configured to use the official mapping names from Mojang for methods and fields 
-in the Minecraft codebase. These names are covered by a specific license. All modders should be aware of this
-license. For the latest license text, refer to the mapping file itself, or the reference copy here:
-https://github.com/NeoForged/NeoForm/blob/main/Mojang.md
+## Alpha
 
-Additional Resources: 
-==========
-Community Documentation: https://docs.neoforged.net/  
-NeoForged Discord: https://discord.neoforged.net/
+This mod is still in alpha and is prone to be buggy.
+Please report any bugs on github or through discord.
+
+## Compatibility
+
+Curvy Rails are compatible with vanilla minecarts and should be compatible with other mod's carts.
+
+In the worst case, another mod's carts will simply not function on Curvy Rails, but will work still on vanilla rails. This mod does not change the behavior of vanilla rails.
+
+## Future Plans
+
+- Bigger curves
+- Smoother slopes
+- Diagonal Rails
+- different curve shapes
+- better integration with Railcraft Reborn rail types.
