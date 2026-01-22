@@ -1,7 +1,6 @@
 package com.froobert.curvyrails;
 
 import net.minecraft.ChatFormatting;
-import net.minecraft.client.Minecraft;
 import net.minecraft.network.chat.ClickEvent;
 import net.minecraft.network.chat.CommonComponents;
 import net.minecraft.network.chat.Component;
@@ -15,8 +14,6 @@ import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.fml.loading.moddiscovery.ModFileInfo;
 import net.neoforged.neoforge.client.event.ClientPlayerNetworkEvent;
-import net.neoforged.neoforge.client.gui.ConfigurationScreen;
-import net.neoforged.neoforge.client.gui.IConfigScreenFactory;
 
 // This class will not load on dedicated servers. Accessing client side code from here is safe.
 @Mod(value = CurvyRails.MODID, dist = Dist.CLIENT)
@@ -47,26 +44,26 @@ public class CurvyRailsClient {
                 Component.literal("Curvy Rails")
                         .withStyle(ChatFormatting.GREEN)
                         .append(Component.literal(" is currently in early Alpha.")
-                        .withStyle(ChatFormatting.GRAY)),
+                                .withStyle(ChatFormatting.GRAY)),
                 Component.literal("Expect bugs and breaking changes between versions")
                         .withStyle(ChatFormatting.GRAY),
                 Component.literal("Report any bugs on ")
                         .withStyle(ChatFormatting.GRAY)
                         .append(
-                        Component.literal("GitHub")
-                        .withStyle(style -> style
-                                .withColor(ChatFormatting.WHITE)
-                                .withUnderlined(true)
-                                .withClickEvent(new ClickEvent(ClickEvent.Action.OPEN_URL, issueUrl)))
-                ).append(Component.literal(" or ")).append(
-                        Component.literal("Discord").withStyle(
-                            style -> style
-                                    .withColor(ChatFormatting.BLUE)
-                                    .withUnderlined(true)
-                                    .withClickEvent(new ClickEvent(ClickEvent.Action.OPEN_URL, discordUrl))
-                        )
-                ),
+                                Component.literal("GitHub")
+                                        .withStyle(style -> style
+                                                .withColor(ChatFormatting.WHITE)
+                                                .withUnderlined(true)
+                                                .withClickEvent(new ClickEvent(ClickEvent.Action.OPEN_URL, issueUrl)))
+                        ).append(Component.literal(" or ")).append(
+                                Component.literal("Discord").withStyle(
+                                        style -> style
+                                                .withColor(ChatFormatting.BLUE)
+                                                .withUnderlined(true)
+                                                .withClickEvent(new ClickEvent(ClickEvent.Action.OPEN_URL, discordUrl))
+                                )
+                        ),
                 Component.literal(""));
-            event.getPlayer().displayClientMessage(message, false);
+        event.getPlayer().displayClientMessage(message, false);
     }
 }

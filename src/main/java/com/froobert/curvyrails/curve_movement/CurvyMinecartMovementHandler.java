@@ -18,22 +18,17 @@ import javax.annotation.Nullable;
 /**
  * Contains methods which replace like-named methods in AbstractMinecart when cart
  * is on a curvyrail track.
+ *
  * @see com.froobert.curvyrails.mixin.AbstractMinecartMixin
  * @see AbstractMinecart
- *
  * @see AbstractCurveHandler
- * */
+ *
+ */
 public class CurvyMinecartMovementHandler {
-
-    // Hack to access private method of AbstractMinecart
-    @FunctionalInterface
-    public interface ApplyNaturalSlowdown {
-        void applyNaturalSlowdown();
-    }
 
     private static final double CART_ALTITUDE = 0.0625;
 
-    public static void moveAlongTrack(AbstractMinecart cart, BlockPos trackPos, BlockState state, AbstractCurveRail curveBlock, ApplyNaturalSlowdown applyNaturalSlowdown) {
+    public static void moveAlongTrack(AbstractMinecart cart, BlockPos trackPos, BlockState state, AbstractCurveRail<?> curveBlock, ApplyNaturalSlowdown applyNaturalSlowdown) {
         final Vec3 cartStartPos = cart.position();
         final Vec3 adjustedPos = cart.getPos(cartStartPos.x, cartStartPos.y, cartStartPos.z);
 
@@ -42,7 +37,7 @@ public class CurvyMinecartMovementHandler {
 
         AbstractCurveHandler curveHandler = curveBlock.getCurveHandler();
 
-        if (adjustedPos != null){
+        if (adjustedPos != null) {
             var snappedVelocity = snapCartVelocityAlongTrack(cart, trackPos, state, curveHandler, adjustedPos.x, adjustedPos.y, adjustedPos.z);
             cart.setDeltaMovement(snappedVelocity);
         }
@@ -84,14 +79,14 @@ public class CurvyMinecartMovementHandler {
         }
 
 
-
     }
 
     @Nullable
     public static Vec3 getPos(AbstractMinecart cart, AbstractCurveHandler curveHandler, double x, double y, double z) {
-        var cartPos = new Vec3(x,y,z);
+        var cartPos = new Vec3(x, y, z);
         var trackPos = Util.Math.blockPosFromVec(cartPos);
 
+        // vanilla code assumes
         Level level = cart.level();
 
         int x_f = Mth.floor(cartPos.x);
@@ -109,11 +104,6 @@ public class CurvyMinecartMovementHandler {
         }
     }
 
-
-
-
-
-
     private static Vec3 snapCartVelocityAlongTrack(AbstractMinecart cart, BlockPos trackPos, BlockState state, AbstractCurveHandler curveHandler, double x, double y, double z) {
         // Redirect velocity in track direction.
         final Vec3 m_delta = cart.getDeltaMovement();
@@ -125,14 +115,21 @@ public class CurvyMinecartMovementHandler {
 
         final double dot = tangent.x * m_delta.x + tangent.z * m_delta.z;
         if (dot < 0.0) {
-            limited_magnitude *= - 1.0;
+            limited_magnitude *= -1.0;
         }
 
 
         final double vx = limited_magnitude * tangent.x;
         final double vz = limited_magnitude * tangent.z;
 
-        return new Vec3(vx,0.0,vz);
+        return new Vec3(vx, 0.0, vz);
+    }
+
+
+    // Hack to access private method of AbstractMinecart
+    @FunctionalInterface
+    public interface ApplyNaturalSlowdown {
+        void applyNaturalSlowdown();
     }
 
 

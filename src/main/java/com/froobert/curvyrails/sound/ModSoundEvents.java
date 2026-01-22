@@ -17,7 +17,6 @@ public class ModSoundEvents {
             register("tink");
 
 
-
     public static void register(IEventBus modEventBus) {
         deferredRegister.register(modEventBus);
     }

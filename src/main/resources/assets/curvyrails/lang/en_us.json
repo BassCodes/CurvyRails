@@ -1,5 +1,7 @@
 {
   "curvyrails.configuration.title": "Curvy Rails Configs",
   "curvyrails.configuration.section.curvyrails.common.toml": "Curvy Rails Configs",
-  "curvyrails.configuration.section.curvyrails.common.toml.title": "Curvy Rails Configs"
+  "curvyrails.configuration.section.curvyrails.common.toml.title": "Curvy Rails Configs",
+  "block.curvyrails.small_curve_rail": "Small Rail Curve",
+  "block.curvyrails.medium_curve_rail": "Medium Rail Curve"
 }

@@ -6,13 +6,14 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.Vec3;
 
 /**
-    @see CurvyMinecartMovementHandler
+ * @see CurvyMinecartMovementHandler
  */
 public interface AbstractCurveHandler {
     /**
      * @return Cart position snapped on x,z axes to rail
      */
     Vec3 snapCartPositionAlongTrack(AbstractMinecart cart, BlockState state, double x, double y, double z);
+
     /**
      * @return Angle vector representing tangent line on rail at cart
      */

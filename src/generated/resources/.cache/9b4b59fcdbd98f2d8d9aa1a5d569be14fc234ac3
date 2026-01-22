@@ -1,6 +1,6 @@
-// 1.21.1	2026-01-18T22:28:40.630958008	Block States: curvyrails
-de9bd79872c4e5e5f3ffc28cd7dcfce31e2ce79f assets/curvyrails/blockstates/small_curve_rail.json
-23f14cdecc3c81920716faf1959c96a60353be11 assets/curvyrails/models/block/curve_rail_entry.json
-481cc652ee14eb90032b4f5412af2b72b57c0e13 assets/curvyrails/models/block/curve_rail_exit.json
-463d4cafa20d01c10d7340f01f67894e2d498974 assets/curvyrails/models/block/curve_rail_middle.json
-5ed6805849149959d739a9e010a08c74c91c7763 assets/curvyrails/models/block/curve_rail_middle_low.json
+// 1.21.1	2026-01-21T12:25:45.859247495	Block States: curvyrails
+b3d5cf4da27fc00f33f8fc3ece4f6aba0ccb219d assets/curvyrails/blockstates/medium_curve_rail.json
+92f8bb3c9baf9c23f6d9fde3e446f7168357c973 assets/curvyrails/blockstates/small_curve_rail.json
+95606ad5ac200330b689ffec143410b92f924371 assets/curvyrails/models/block/curves/medium_curve_rail.json
+306c46fcd36c394ecdedd3d25f389b4d01e25d0e assets/curvyrails/models/block/curves/small_curve_rail.json
+fc6f08cf36a9d81f8fd96d51e9012fc4e169eb47 assets/curvyrails/models/block/empty_rail.json

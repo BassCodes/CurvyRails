@@ -1,0 +1,44 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "condition": "minecraft:any_of",
+              "terms": [
+                {
+                  "block": "curvyrails:small_curve_rail",
+                  "condition": "minecraft:block_state_property",
+                  "properties": {
+                    "curve_section": "entry"
+                  }
+                },
+                {
+                  "block": "curvyrails:small_curve_rail",
+                  "condition": "minecraft:block_state_property",
+                  "properties": {
+                    "curve_section": "middle"
+                  }
+                },
+                {
+                  "block": "curvyrails:small_curve_rail",
+                  "condition": "minecraft:block_state_property",
+                  "properties": {
+                    "curve_section": "exit"
+                  }
+                }
+              ]
+            }
+          ],
+          "name": "minecraft:rail"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "curvyrails:blocks/small_curve_rail"
+}

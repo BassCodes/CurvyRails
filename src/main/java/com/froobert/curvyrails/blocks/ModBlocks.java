@@ -20,15 +20,16 @@ public class ModBlocks {
     private static final BlockBehaviour.Properties RAIL_BEHAVIOR = BlockBehaviour.Properties.ofFullCopy(Blocks.RAIL);
 
     public static final DeferredBlock<SmallCurveRail> SMALL_CURVE_RAIL = BLOCKS.register("small_curve_rail", () -> new SmallCurveRail(RAIL_BEHAVIOR));
+    public static final DeferredBlock<MediumCurveRail> MEDIUM_CURVE_RAIL = BLOCKS.register("medium_curve_rail", () -> new MediumCurveRail(RAIL_BEHAVIOR));
 
-    private static <T extends Block> DeferredBlock<T>  registerBlock(String name, Supplier<T> block) {
+    private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
         DeferredBlock<T> result = BLOCKS.register(name, block);
-        registerBlockItem(name,result);
+        registerBlockItem(name, result);
         return result;
     }
 
     private static <T extends Block> void registerBlockItem(String name, DeferredBlock<T> block) {
-        ModItems.ITEMS.register(name, ( ) -> new BlockItem(block.get(), new Item.Properties()));
+        ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
     }
 
     public static void register(IEventBus eventBus) {

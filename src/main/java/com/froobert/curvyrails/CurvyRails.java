@@ -3,23 +3,20 @@ package com.froobert.curvyrails;
 import com.froobert.curvyrails.blocks.ModBlocks;
 import com.froobert.curvyrails.data.ModBlockModelProvider;
 import com.froobert.curvyrails.data.ModBlockTagsProvider;
+import com.froobert.curvyrails.data.loot.ModLootTableProvider;
 import com.froobert.curvyrails.sound.ModSoundEvents;
 import com.froobert.curvyrails.sound.ModSoundsProvider;
-import net.neoforged.neoforge.data.event.GatherDataEvent;
-import org.slf4j.Logger;
-
 import com.mojang.logging.LogUtils;
-
-import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.world.level.block.Blocks;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.config.ModConfig;
-import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.common.NeoForge;
+import net.neoforged.neoforge.data.event.GatherDataEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
+import org.slf4j.Logger;
 
 @Mod(CurvyRails.MODID)
 public class CurvyRails {
@@ -57,13 +54,11 @@ public class CurvyRails {
         var lookupProvider = event.getLookupProvider();
         var fileHelper = event.getExistingFileHelper();
 
-
         var blockTags = new ModBlockTagsProvider(packOutput, lookupProvider, fileHelper);
         generator.addProvider(event.includeServer(), blockTags);
         generator.addProvider(event.includeServer(), new ModBlockModelProvider(packOutput, fileHelper));
-        generator.addProvider(event.includeServer(), new ModSoundsProvider(packOutput,fileHelper));
-
-
+        generator.addProvider(event.includeServer(), new ModSoundsProvider(packOutput, fileHelper));
+        generator.addProvider(event.includeServer(), new ModLootTableProvider(packOutput, lookupProvider));
     }
 
 
